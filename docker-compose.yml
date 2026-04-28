@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      - AGRI_DB_HOST=db
+      - AGRI_DB_PORT=3306
+      - AGRI_DB_NAME=agricongo
+      - AGRI_DB_USER=root
+      - AGRI_DB_PASSWORD=password
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: agricongo
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql

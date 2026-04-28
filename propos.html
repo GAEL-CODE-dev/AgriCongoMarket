@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriCongoMarket | A propos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="productions.css">
+</head>
+<body class="bg-stone-50 text-gray-800">
+  <header class="sticky top-0 z-40 border-b border-orange-100 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <a href="index.html" class="text-2xl font-bold text-orange-600">AgriCongoMarket</a>
+
+      <nav class="absolute left-1/2 hidden -translate-x-1/2 md:flex md:items-center md:gap-8">
+        <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="font-medium text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="font-medium text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="font-medium text-orange-600">A propos</a>
+        <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="font-medium text-gray-700 hover:text-orange-600">Dashboard</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <a href="connexion.php" class="font-medium text-orange-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-white transition hover:bg-orange-700">Decouvrir le reseau</a>
+      </div>
+
+      <button id="menu-btn" class="flex flex-col space-y-1 md:hidden" aria-label="Ouvrir le menu">
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-orange-100 bg-white px-6 py-4 md:hidden">
+      <nav class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="text-orange-600">A propos</a>
+        <a href="contact.html" class="text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="text-gray-700 hover:text-orange-600">Dashboard</a>
+        <a href="connexion.php" class="text-gray-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-center text-white hover:bg-orange-700">Decouvrir le reseau</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.16),_transparent_28%),linear-gradient(135deg,#111827,#1f2937)] px-6 py-20 text-white">
+      <div class="absolute inset-0 opacity-10">
+        <div class="hero-pattern h-full w-full"></div>
+      </div>
+
+      <div class="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <span class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-sm uppercase tracking-[0.3em] text-orange-100">Notre vision</span>
+          <h1 class="mt-6 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">Rendre l'agriculture locale plus visible, plus simple a vendre et plus facile a acheter.</h1>
+          <p class="mt-6 max-w-2xl text-lg text-gray-200">AgriCongoMarket est pense comme une vitrine claire pour connecter producteurs, transformateurs et consommateurs autour d'une offre locale mieux presentee.</p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="produits.html" class="rounded-xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Voir les produits</a>
+            <a href="production.html" class="rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/15">Voir la production</a>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <article class="rounded-[28px] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur-md">
+            <p class="text-sm uppercase tracking-[0.28em] text-orange-100">Ce que nous construisons</p>
+            <h2 class="mt-3 text-2xl font-bold">Une marketplace agricole plus lisible</h2>
+            <p class="mt-4 text-sm leading-7 text-gray-200">Le projet pose les bases d'un espace ou les produits, les exploitations et les filieres peuvent etre consultes de facon simple, rassurante et moderne.</p>
+          </article>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-white p-5 text-gray-800 shadow-xl">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="font-bold">Lien direct</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-500">Moins d'intermediaires, plus de clarte entre le vendeur et l'acheteur.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-5 text-gray-800 shadow-xl">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-green-100 text-green-700">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3 class="font-bold">Ancrage local</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-500">Une mise en avant des realites agricoles et des territoires.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-16">
+      <div class="grid gap-8 lg:grid-cols-3">
+        <article class="rounded-[30px] bg-white p-7 shadow-lg ring-1 ring-black/5">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-orange-500">Mission</p>
+          <h2 class="mt-4 text-2xl font-extrabold text-gray-900">Valoriser les producteurs</h2>
+          <p class="mt-4 text-sm leading-7 text-gray-500">Nous voulons donner une meilleure visibilite aux producteurs locaux en les presentant avec leurs produits, leurs zones et leurs specificites.</p>
+        </article>
+
+        <article class="rounded-[30px] bg-white p-7 shadow-lg ring-1 ring-black/5">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-green-700">Promesse</p>
+          <h2 class="mt-4 text-2xl font-extrabold text-gray-900">Simplifier l'achat</h2>
+          <p class="mt-4 text-sm leading-7 text-gray-500">Le visiteur doit comprendre rapidement ce qui est vendu, a quel prix, par qui et dans quel cadre de production.</p>
+        </article>
+
+        <article class="rounded-[30px] bg-white p-7 shadow-lg ring-1 ring-black/5">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">Objectif</p>
+          <h2 class="mt-4 text-2xl font-extrabold text-gray-900">Poser une base evolutive</h2>
+          <p class="mt-4 text-sm leading-7 text-gray-500">Le site actuel est une base front-end solide qui pourra ensuite etre reliee a un vrai backend et a une base de donnees.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-orange-500">Pourquoi ce projet</p>
+            <h2 class="mt-4 text-3xl font-extrabold text-gray-900 md:text-4xl">L'agriculture merite une presentation a la hauteur de sa valeur.</h2>
+            <p class="mt-5 text-base leading-8 text-gray-500">Beaucoup de producteurs ont des produits de qualite, mais peu d'outils simples pour les presenter proprement en ligne. AgriCongoMarket repond a ce besoin avec une interface claire, visuelle et accessible.</p>
+            <p class="mt-4 text-base leading-8 text-gray-500">Cette page “A propos” sert a expliquer l'intention du projet, rassurer les visiteurs et donner un cadre plus professionnel a l'ensemble du site.</p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-stone-50 p-6 ring-1 ring-black/5">
+              <div class="mb-3 text-3xl font-extrabold text-orange-600">01</div>
+              <h3 class="font-bold text-gray-900">Vitrine agricole</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-500">Un espace pour exposer les produits et les filieres de facon credible.</p>
+            </div>
+            <div class="rounded-3xl bg-stone-50 p-6 ring-1 ring-black/5">
+              <div class="mb-3 text-3xl font-extrabold text-green-700">02</div>
+              <h3 class="font-bold text-gray-900">Parcours plus fluide</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-500">Des pages reliees entre elles et une navigation qui ne se perd pas.</p>
+            </div>
+            <div class="rounded-3xl bg-stone-50 p-6 ring-1 ring-black/5">
+              <div class="mb-3 text-3xl font-extrabold text-sky-700">03</div>
+              <h3 class="font-bold text-gray-900">Base technique saine</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-500">Une structure plus propre pour accueillir les futures evolutions.</p>
+            </div>
+            <div class="rounded-3xl bg-stone-50 p-6 ring-1 ring-black/5">
+              <div class="mb-3 text-3xl font-extrabold text-gray-900">04</div>
+              <h3 class="font-bold text-gray-900">Extension backend</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-500">Le projet peut ensuite accueillir des comptes, commandes et donnees dynamiques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-16">
+      <article class="rounded-[32px] bg-gray-950 p-8 text-white shadow-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.28em] text-orange-300">Notre trajectoire</p>
+        <h2 class="mt-4 text-3xl font-extrabold">Les prochaines etapes du projet</h2>
+
+        <div class="mt-8 space-y-6">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h3 class="font-bold">Structurer les pages principales</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-300">Accueil, production, produits et a propos forment maintenant une base de navigation plus serieuse.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h3 class="font-bold">Ajouter une logique metier</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-300">Connexion, comptes vendeurs, panier complet et commandes sont les prochaines briques naturelles.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h3 class="font-bold">Connecter une base de donnees</h3>
+              <p class="mt-2 text-sm leading-7 text-gray-300">Les produits, fermes et categories pourront ensuite etre geres depuis un vrai back-office.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-gradient-to-r from-sky-500 to-orange-500 px-6 py-10 text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-white">AgriCongoMarket</h2>
+        <p class="text-gray-100">Un projet vitrine pour mieux presenter la production locale et preparer une vraie marketplace agricole.</p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Navigation</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li><a href="index.html" class="hover:text-orange-100">Accueil</a></li>
+          <li><a href="production.html" class="hover:text-orange-100">Production</a></li>
+          <li><a href="produits.html" class="hover:text-orange-100">Produits</a></li>
+          <li><a href="propos.html" class="hover:text-orange-100">A propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Contact</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li>Brazzaville, Congo</li>
+          <li>+242 XX XXX XX XX</li>
+          <li>gaelyangu@gmail.com</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Action</h3>
+        <p class="mb-4 text-gray-100">Le prochain vrai cap est de brancher des donnees dynamiques et des formulaires utiles.</p>
+        <a href="produits.html" class="inline-flex rounded-xl bg-white px-4 py-2 font-medium text-orange-600 hover:bg-orange-50">Explorer les produits</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/25 pt-6 text-center text-sm text-gray-100">
+      © 2026 AgriCongoMarket. Tous droits reserves.
+    </div>
+  </footer>
+
+  <script src="productions.js"></script>
+</body>
+</html>

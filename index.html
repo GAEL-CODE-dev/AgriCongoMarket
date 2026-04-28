@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriCongoMarket | Produits locaux et vente agricole</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-gray-800">
+  <header class="sticky top-0 z-40 border-b border-orange-100 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <a href="index.html" class="text-2xl font-bold text-orange-600">AgriCongoMarket</a>
+
+      <nav class="absolute left-1/2 hidden -translate-x-1/2 md:flex md:items-center md:gap-8">
+        <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="font-medium text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="font-medium text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="font-medium text-gray-700 hover:text-orange-600">A propos</a>
+        <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="font-medium text-gray-700 hover:text-orange-600">Dashboard</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <a href="connexion.php" class="font-medium text-orange-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-white transition hover:bg-orange-700">Devenir vendeur</a>
+      </div>
+
+      <button id="menu-btn" class="flex flex-col space-y-1 md:hidden" aria-label="Ouvrir le menu">
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-orange-100 bg-white px-6 py-4 md:hidden">
+      <nav class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="text-gray-700 hover:text-orange-600">A propos</a>
+        <a href="contact.html" class="text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="text-gray-700 hover:text-orange-600">Dashboard</a>
+        <a href="connexion.php" class="text-gray-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-center text-white hover:bg-orange-700">Devenir vendeur</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative h-[540px] overflow-hidden">
+      <div id="slides" class="flex h-full transition-transform duration-700 ease-in-out">
+        <div class="relative min-w-full">
+          <img src="img/vente.png" alt="Produits agricoles en vente" class="h-full w-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 px-4 text-center">
+            <h1 class="mb-4 max-w-4xl text-4xl font-bold text-white md:text-5xl">Le marche local qui rapproche producteurs et consommateurs</h1>
+            <p class="mb-6 max-w-2xl text-lg text-gray-200">Decouvrez des produits frais, visibles en ligne et disponibles pres de chez vous.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="produits.html" class="rounded-lg bg-orange-600 px-6 py-3 text-white hover:bg-orange-700">Voir les produits</a>
+              <a href="#apropos" class="rounded-lg bg-white px-6 py-3 text-gray-800 hover:bg-gray-100">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative min-w-full">
+          <img src="img/fiabilitez.png" alt="Agriculture fiable" class="h-full w-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 px-4 text-center">
+            <h2 class="mb-4 text-4xl font-bold text-white md:text-5xl">Vendez simplement vos recoltes</h2>
+            <p class="mb-6 max-w-2xl text-lg text-gray-200">Presentez vos produits, fixez vos prix et soyez visible sans intermediaire.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#producteurs" class="rounded-lg bg-green-600 px-6 py-3 text-white hover:bg-green-700">Devenir vendeur</a>
+              <a href="produits.html" class="rounded-lg bg-white px-6 py-3 text-gray-800 hover:bg-gray-100">Decouvrir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative min-w-full">
+          <img src="img/commandez.png" alt="Commande rapide" class="h-full w-full object-cover">
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 px-4 text-center">
+            <h2 class="mb-4 text-4xl font-bold text-white md:text-5xl">Qualite, proximite et rapidite</h2>
+            <p class="mb-6 max-w-2xl text-lg text-gray-200">Passez commande plus vite et valorisez les acteurs agricoles de Brazzaville et d'ailleurs.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="produits.html" class="rounded-lg bg-orange-500 px-6 py-3 text-white hover:bg-orange-600">Commander</a>
+              <a href="#contact" class="rounded-lg bg-white px-6 py-3 text-gray-800 hover:bg-gray-100">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 shadow">‹</button>
+      <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 shadow">›</button>
+
+      <div class="absolute bottom-4 flex w-full justify-center gap-2">
+        <button class="dot h-3 w-3 rounded-full bg-white opacity-50" aria-label="Slide 1"></button>
+        <button class="dot h-3 w-3 rounded-full bg-white opacity-50" aria-label="Slide 2"></button>
+        <button class="dot h-3 w-3 rounded-full bg-white opacity-50" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <section class="px-6 py-14 text-center">
+      <h2 class="text-3xl font-bold md:text-4xl">Nos rayons</h2>
+      <p class="mt-3 text-lg text-gray-500">Des categories claires pour acheter plus facilement.</p>
+      <div class="mt-4 flex justify-center">
+        <span class="h-1 w-16 rounded-full bg-blue-600"></span>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="card overflow-hidden rounded-2xl bg-white shadow-md">
+        <div class="group relative overflow-hidden">
+          <img src="img/produits.png" alt="Fruits et legumes" class="img h-56 w-full object-cover transition duration-500">
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition duration-500">
+            <span class="text-lg font-semibold text-white">Voir la categorie</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="mb-2 text-lg font-bold">Fruits et legumes</h3>
+          <p class="mb-4 text-sm text-gray-600">Des produits frais et bien presentes pour les besoins du quotidien.</p>
+          <a href="produits.html" class="link inline-flex items-center font-medium text-blue-600">Explorer <span class="arrow ml-2 transition-transform duration-300">→</span></a>
+        </div>
+      </article>
+
+      <article class="card overflow-hidden rounded-2xl bg-white shadow-md">
+        <div class="relative overflow-hidden">
+          <img src="img/oeufs.png" alt="Produits laitiers et oeufs" class="img h-56 w-full object-cover transition duration-500">
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition duration-500">
+            <span class="text-lg font-semibold text-white">Voir la categorie</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="mb-2 text-lg font-bold">Produits laitiers et oeufs</h3>
+          <p class="mb-4 text-sm text-gray-600">Des produits de ferme rassurants, accessibles et faciles a commander.</p>
+          <a href="produits.html" class="link inline-flex items-center font-medium text-blue-600">Explorer <span class="arrow ml-2 transition-transform duration-300">→</span></a>
+        </div>
+      </article>
+
+      <article class="card overflow-hidden rounded-2xl bg-white shadow-md">
+        <div class="relative overflow-hidden">
+          <img src="img/peche.png" alt="Viandes et poissons" class="img h-56 w-full object-cover transition duration-500">
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition duration-500">
+            <span class="text-lg font-semibold text-white">Voir la categorie</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="mb-2 text-lg font-bold">Viandes et poissons</h3>
+          <p class="mb-4 text-sm text-gray-600">Une presentation claire pour les produits issus de l'elevage et de la peche.</p>
+          <a href="produits.html" class="link inline-flex items-center font-medium text-blue-600">Explorer <span class="arrow ml-2 transition-transform duration-300">→</span></a>
+        </div>
+      </article>
+
+      <article class="card overflow-hidden rounded-2xl bg-white shadow-md">
+        <div class="relative overflow-hidden">
+          <img src="img/huile.png" alt="Huile et miel" class="img h-56 w-full object-cover transition duration-500">
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition duration-500">
+            <span class="text-lg font-semibold text-white">Voir la categorie</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="mb-2 text-lg font-bold">Huiles, miel et epicerie</h3>
+          <p class="mb-4 text-sm text-gray-600">Des produits artisanaux mieux valorises avec un parcours plus simple.</p>
+          <a href="produits.html" class="link inline-flex items-center font-medium text-blue-600">Explorer <span class="arrow ml-2 transition-transform duration-300">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section id="apropos" class="mx-auto mt-16 max-w-3xl rounded-2xl bg-white px-6 py-12 text-center shadow-md">
+      <span class="inline-block rounded-full bg-orange-100 px-4 py-1 text-sm font-semibold text-orange-600">Coup de coeur</span>
+      <h2 class="mt-4 text-3xl font-bold md:text-4xl">Selection de la semaine</h2>
+      <div class="mt-4 flex justify-center">
+        <span class="h-1 w-16 rounded-full bg-orange-500"></span>
+      </div>
+      <p class="mt-4 text-lg text-gray-500">Une vitrine simple pour montrer les meilleurs produits et donner envie d'aller sur la page catalogue.</p>
+    </section>
+
+    <section class="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="product overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="overflow-hidden">
+          <img src="img/tomates-saison-scaled.webp" alt="Tomates fraiches" class="h-48 w-full object-cover transition duration-500 hover:scale-110">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold">Tomates fraiches</h3>
+          <p class="mt-1 text-sm text-gray-600">Produits locaux, gout naturel et presentation plus moderne.</p>
+          <p class="mt-3 font-bold text-green-600">1 200 FCFA / kg</p>
+          <a href="produits.html" class="link mt-4 inline-flex items-center font-medium text-blue-600 hover:underline">Voir tout <span class="arrow ml-2 transition-transform">→</span></a>
+        </div>
+      </article>
+
+      <article class="product overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="overflow-hidden">
+          <img src="img/bananes.webp" alt="Bananes douces" class="h-48 w-full object-cover transition duration-500 hover:scale-110">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold">Bananes douces</h3>
+          <p class="mt-1 text-sm text-gray-600">Des fiches simples et lisibles pour mettre en valeur les fruits.</p>
+          <p class="mt-3 font-bold text-green-600">800 FCFA / kg</p>
+          <a href="produits.html" class="link mt-4 inline-flex items-center font-medium text-blue-600 hover:underline">Voir tout <span class="arrow ml-2 transition-transform">→</span></a>
+        </div>
+      </article>
+
+      <article class="product overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="overflow-hidden">
+          <img src="img/miel-nitrub.jpg" alt="Miel artisanal" class="h-48 w-full object-cover transition duration-500 hover:scale-110">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold">Miel artisanal</h3>
+          <p class="mt-1 text-sm text-gray-600">Un produit mieux presente et relie a la page catalogue.</p>
+          <p class="mt-3 font-bold text-green-600">1 500 FCFA / litre</p>
+          <a href="produits.html" class="link mt-4 inline-flex items-center font-medium text-blue-600 hover:underline">Voir tout <span class="arrow ml-2 transition-transform">→</span></a>
+        </div>
+      </article>
+
+      <article class="product overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="overflow-hidden">
+          <img src="img/viandes.jpg" alt="Viandes fraiches" class="h-48 w-full object-cover transition duration-500 hover:scale-110">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-bold">Viandes fraiches</h3>
+          <p class="mt-1 text-sm text-gray-600">Une meilleure coherence visuelle pour les produits mis en avant.</p>
+          <p class="mt-3 font-bold text-green-600">1 000 FCFA / kg</p>
+          <a href="produits.html" class="link mt-4 inline-flex items-center font-medium text-blue-600 hover:underline">Voir tout <span class="arrow ml-2 transition-transform">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section id="producteurs" class="px-6 py-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+        <div class="space-y-6">
+          <p class="reveal text-sm uppercase tracking-[0.35em] text-gray-500">Espace producteur</p>
+          <h2 class="reveal text-4xl font-bold leading-tight text-gray-900 md:text-5xl">Vendez directement, sans intermediaire et a votre rythme.</h2>
+          <p class="reveal text-lg text-gray-600">La vraie force du projet est ici : donner une vitrine simple aux vendeurs locaux. La page d'accueil doit donc les rassurer et les orienter clairement.</p>
+          <a href="#contact" class="reveal inline-flex items-center gap-2 rounded-xl bg-orange-500 px-6 py-3 text-white shadow-md transition hover:scale-105 hover:bg-orange-600">Creer mon espace vendeur →</a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div class="reveal rounded-2xl bg-white p-6 shadow-sm">
+            <div class="mb-3 text-xl">01</div>
+            <h3 class="font-semibold text-gray-800">Visibilite locale</h3>
+            <p class="mt-1 text-sm text-gray-500">Vos produits sont presents sur une page claire et facile a parcourir.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white p-6 shadow-sm">
+            <div class="mb-3 text-xl">02</div>
+            <h3 class="font-semibold text-gray-800">Catalogue simple</h3>
+            <p class="mt-1 text-sm text-gray-500">Les cartes produit peuvent etre mises a jour rapidement sans refaire toute la page.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white p-6 shadow-sm">
+            <div class="mb-3 text-xl">03</div>
+            <h3 class="font-semibold text-gray-800">Parcours plus clair</h3>
+            <p class="mt-1 text-sm text-gray-500">Moins de liens morts, moins de confusion, plus de confiance pour le visiteur.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-white p-6 shadow-sm">
+            <div class="mb-3 text-xl">04</div>
+            <h3 class="font-semibold text-gray-800">Base evolutive</h3>
+            <p class="mt-1 text-sm text-gray-500">Le projet est pret a accueillir un vrai backend quand tu voudras passer a l'etape suivante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-gradient-to-r from-sky-500 to-orange-500 px-6 py-10 text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
+      <div class="space-y-4 reveal">
+        <h2 class="text-2xl font-bold text-white">AgriCongoMarket</h2>
+        <p class="text-gray-100">Plateforme vitrine pour connecter producteurs locaux et acheteurs avec un parcours simple.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="mb-4 font-semibold">Navigation</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li><a href="index.html" class="hover:text-orange-100">Accueil</a></li>
+          <li><a href="produits.html" class="hover:text-orange-100">Produits</a></li>
+          <li><a href="#producteurs" class="hover:text-orange-100">Producteurs</a></li>
+          <li><a href="#apropos" class="hover:text-orange-100">A propos</a></li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 class="mb-4 font-semibold">Contact</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li>Brazzaville, Congo</li>
+          <li>+242 XX XXX XX XX</li>
+          <li>gaelyangu@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 class="mb-4 font-semibold">Action rapide</h3>
+        <p class="mb-4 text-gray-100">La prochaine etape logique est d'ajouter un vrai formulaire de contact ou de connexion.</p>
+        <a href="produits.html" class="inline-flex rounded-xl bg-white px-4 py-2 font-medium text-orange-600 hover:bg-orange-50">Consulter le catalogue</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/25 pt-6 text-center text-sm text-gray-100">
+      © 2026 AgriCongoMarket. Tous droits reserves.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

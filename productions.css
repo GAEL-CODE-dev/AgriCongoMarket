@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.hero-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 78%);
+}
+
+.production-card,
+.producer-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.5s ease;
+}
+
+.production-card:hover,
+.producer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -20px rgba(15, 23, 42, 0.35);
+}
+
+.production-card.is-hidden {
+  display: none;
+}
+
+.production-filter {
+  transition: all 0.2s ease;
+}
+
+.production-filter.active {
+  background: #f97316;
+  color: #fff;
+  border-color: #f97316;
+  box-shadow: 0 8px 20px -12px rgba(249, 115, 22, 0.8);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 16px;
+}
+
+.timeline-item:not(:last-child) {
+  padding-bottom: 18px;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 18px;
+  width: 2px;
+  height: calc(100% - 6px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeline-dot {
+  position: relative;
+  top: 5px;
+  height: 18px;
+  width: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fb923c, #fde047);
+  box-shadow: 0 0 0 6px rgba(251, 146, 60, 0.12);
+}

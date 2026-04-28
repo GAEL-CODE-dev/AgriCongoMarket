@@ -1,0 +1,16 @@
+{
+  "name": "agricongo/agricongo",
+  "description": "Plateforme e-commerce pour produits agricoles",
+  "type": "project",
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "AgriCongo\\": "src/"
+    }
+  }
+}

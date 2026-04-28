@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriCongoMarket | Catalogue produits</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="produits.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-stone-100 text-gray-800 antialiased">
+  <header class="sticky top-0 z-40 border-b border-orange-100 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <a href="index.html" class="text-2xl font-bold text-orange-600">AgriCongoMarket</a>
+
+      <nav class="absolute left-1/2 hidden -translate-x-1/2 md:flex md:items-center md:gap-8">
+        <a href="index.html" class="font-medium text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="font-medium text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="font-medium text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="font-medium text-gray-700 hover:text-orange-600">A propos</a>
+        <a href="contact.html" class="font-medium text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="font-medium text-gray-700 hover:text-orange-600">Dashboard</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <a href="connexion.php" class="font-medium text-orange-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-white transition hover:bg-orange-700">Devenir vendeur</a>
+      </div>
+
+      <button id="menu-btn" class="flex flex-col space-y-1 md:hidden" aria-label="Ouvrir le menu">
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+        <span class="h-0.5 w-6 bg-gray-800"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-orange-100 bg-white px-6 py-4 md:hidden">
+      <nav class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-700 hover:text-orange-600">Accueil</a>
+        <a href="production.html" class="text-gray-700 hover:text-orange-600">Production</a>
+        <a href="produits.html" class="text-gray-700 hover:text-orange-600">Produits</a>
+        <a href="propos.html" class="text-gray-700 hover:text-orange-600">A propos</a>
+        <a href="contact.html" class="text-gray-700 hover:text-orange-600">Contact</a>
+        <a href="dashboard.php" class="text-gray-700 hover:text-orange-600">Dashboard</a>
+        <a href="connexion.php" class="text-gray-700 hover:text-orange-600">Connexion</a>
+        <a href="production.html" class="rounded-lg bg-orange-600 px-4 py-2 text-center text-white hover:bg-orange-700">Devenir vendeur</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="toastMessage" class="toast-notif">
+    <i class="fas fa-check-circle text-green-400"></i>
+    <span id="toastText">Ajoute au panier</span>
+  </div>
+
+  <section class="border-b border-green-100 bg-white/80 shadow-sm">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-700 shadow-md">
+            <i class="fas fa-store text-xl text-white"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold tracking-tight text-gray-800 md:text-3xl">Catalogue produits</h1>
+            <p class="text-sm text-gray-500">Un catalogue plus propre, aligne sur les produits et prix d AgriCongo.</p>
+          </div>
+        </div>
+        <div class="inline-flex w-fit items-center gap-2 rounded-full bg-green-100/70 px-4 py-2 text-sm text-gray-600">
+          <i class="fas fa-tractor text-green-600"></i>
+          <span>Produits frais de cooperatives congolaises</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <section class="mb-8 grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+      <div class="rounded-3xl bg-gradient-to-br from-green-900 via-green-800 to-lime-700 p-6 text-white shadow-xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.28em] text-green-100">Panier intelligent</p>
+            <h2 class="mt-2 text-3xl font-bold">Ajoutez un produit et voyez le panier en direct</h2>
+          </div>
+          <div class="rounded-2xl bg-white/10 px-4 py-3 text-sm text-green-50 backdrop-blur-sm">
+            <span id="cartBadgeCount">0</span> article(s) dans le panier
+          </div>
+        </div>
+      </div>
+
+      <aside id="cartPanel" class="cart-panel rounded-3xl bg-white p-5 shadow-lg ring-1 ring-black/5">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
+              <i class="fas fa-shopping-basket"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-900">Mon panier</h2>
+              <p class="text-sm text-gray-500">Visible des qu un produit est ajoute</p>
+            </div>
+          </div>
+          <span id="cartCount" class="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">0</span>
+        </div>
+
+        <div id="cartEmptyState" class="mt-6 rounded-2xl border border-dashed border-gray-200 bg-gray-50 px-4 py-8 text-center text-sm text-gray-500">
+          Aucun produit dans le panier pour le moment.
+        </div>
+
+        <div id="cartItems" class="mt-5 hidden space-y-3"></div>
+
+        <div class="mt-5 border-t border-gray-100 pt-4">
+          <div class="flex items-center justify-between text-sm text-gray-500">
+            <span>Total</span>
+            <span id="cartTotal" class="text-lg font-bold text-gray-900">0 FCFA</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <button id="clearCartBtn" class="flex-1 rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50">
+              Vider
+            </button>
+            <button id="checkoutBtn" class="flex-1 rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+              Commander
+            </button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="mb-10 rounded-2xl bg-white p-5 shadow-md">
+      <div class="relative mb-6">
+        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <input type="text" id="searchInput" placeholder="Rechercher un produit" class="search-input w-full rounded-xl border border-gray-200 py-3 pl-11 pr-4 text-gray-700 outline-none transition">
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="mr-1 text-sm font-medium text-gray-500"><i class="fas fa-filter"></i> Categories :</span>
+        <button data-filter="all" class="filter-btn rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-green-100">Tout</button>
+        <button data-filter="fruits-legumes" class="filter-btn rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-green-100">Fruits et legumes</button>
+        <button data-filter="produits-laitiers" class="filter-btn rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-green-100">Produits frais et oeufs</button>
+        <button data-filter="viandes" class="filter-btn rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-green-100">Viandes et volailles</button>
+        <button data-filter="epicerie" class="filter-btn rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-green-100">Epicerie et miel</button>
+      </div>
+    </div>
+
+    <div id="productsGrid" class="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3"></div>
+
+    <div id="noResultsMessage" class="hidden flex-col items-center gap-3 py-16 text-center">
+      <i class="fas fa-search text-5xl text-gray-300"></i>
+      <p class="text-lg text-gray-500">Aucun produit ne correspond a votre recherche.</p>
+      <button id="resetSearchBtn" class="mt-2 text-sm text-green-700 underline">Reinitialiser la recherche</button>
+    </div>
+  </main>
+
+  <footer id="contact" class="bg-gradient-to-r from-sky-500 to-orange-500 px-6 py-10 text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-white">AgriCongoMarket</h2>
+        <p class="text-gray-100">Catalogue aligne avec le backend et les donnees congolaises du projet.</p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Navigation</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li><a href="index.html" class="hover:text-orange-100">Accueil</a></li>
+          <li><a href="produits.html" class="hover:text-orange-100">Produits</a></li>
+          <li><a href="index.html#producteurs" class="hover:text-orange-100">Producteurs</a></li>
+          <li><a href="index.html#apropos" class="hover:text-orange-100">A propos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Contact</h3>
+        <ul class="space-y-2 text-gray-100">
+          <li>Brazzaville, Congo</li>
+          <li>+242 XX XXX XX XX</li>
+          <li>gaelyangu@gmail.com</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold">Et maintenant</h3>
+        <p class="mb-4 text-gray-100">Le panier et le catalogue parlent maintenant le meme langage que le backend.</p>
+        <a href="index.html" class="inline-flex rounded-xl bg-white px-4 py-2 font-medium text-orange-600 hover:bg-orange-50">Retour a l accueil</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/25 pt-6 text-center text-sm text-gray-100">
+      © 2026 AgriCongoMarket. Tous droits reserves.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="produits.js"></script>
+</body>
+</html>
